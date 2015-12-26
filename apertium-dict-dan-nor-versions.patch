@@ -1,0 +1,13 @@
+--- apertium-dan-nor-1.0.0/configure.ac.orig	2015-12-26 11:42:35.107660042 +0100
++++ apertium-dan-nor-1.0.0/configure.ac	2015-12-26 11:45:19.847653147 +0100
+@@ -10,8 +10,8 @@
+ AC_PROG_AWK
+ #AC_CONFIG_HEADER([config])
+ 
+-PKG_CHECK_MODULES(LTTOOLBOX, lttoolbox-3.2 >= 3.2.0)
+-PKG_CHECK_MODULES(APERTIUM, apertium-3.2 >= 3.2.0)
++PKG_CHECK_MODULES(LTTOOLBOX, lttoolbox-3.2 >= 3.2.0, , [PKG_CHECK_MODULES(LTTOOLBOX, lttoolbox >= 3.2.0)])
++PKG_CHECK_MODULES(APERTIUM, apertium-3.2 >= 3.2.0, , [PKG_CHECK_MODULES(APERTIUM, apertium >= 3.2.0)])
+ 
+ APERTIUM_VER=30
+ 
